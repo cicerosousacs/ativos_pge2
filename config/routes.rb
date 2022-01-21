@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   namespace :admins_ativo do
+    resources :types
+  end
+  namespace :admins_ativo do
     get 'welcome/index'
   end
   devise_for :admins

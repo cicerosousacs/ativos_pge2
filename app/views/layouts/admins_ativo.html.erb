@@ -26,11 +26,11 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center">
                 <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
+                    <i class="fas fa-cubes"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Ativos CTI <sup>1.0</sup></div>
+                <div class="sidebar-brand-text mx-2">Ativos CTI <sup>1.0</sup></div>
             </a>
 
             <!-- Divider -->
@@ -38,7 +38,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -48,15 +48,15 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item active">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-desktop"></i>
                     <span>Ativos</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item active">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-sitemap"></i>
                     <span>Vinculos</span></a>
             </li>
             <!-- Divider -->
@@ -65,13 +65,13 @@
             <li class="nav-item active">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
+                    <i class="fas fa-fw fa-file"></i>
                     <span>Relatorios</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="buttons.html">Buttons</a>
-                        <a class="collapse-item" href="cards.html">Cards</a>
+                        <a class="collapse-item" href="#">Buttons</a>
+                        <a class="collapse-item" href="#">Cards</a>
                     </div>
                 </div>
             </li>
@@ -86,10 +86,21 @@
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="utilities-color.html">Colors</a>
-                        <a class="collapse-item" href="utilities-border.html">Borders</a>
-                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
+                      <%= link_to admins_ativo_types_path do %>
+                        <i class="collapse-item">Áreas</i>
+                      <% end %>
+                      <%= link_to admins_ativo_types_path do %>
+                        <i class="collapse-item">Subareas</i>
+                      <% end %>
+                      <%= link_to admins_ativo_types_path do %>
+                        <i class="collapse-item">Tipos de Ativos</i>
+                      <% end %>
+                      <%= link_to admins_ativo_types_path do %>
+                        <i class="collapse-item">Condição</i>
+                      <% end %>
+                      <%= link_to admins_ativo_types_path do %>
+                        <i class="collapse-item">Situação</i>
+                      <% end %>
                     </div>
                 </div>
             </li>
@@ -186,9 +197,8 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
                         <%= yield %>
+                        
                 </div>
                 <!-- /.container-fluid -->
 
@@ -199,7 +209,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>Ativos CTI - Service Desk</span>
                     </div>
                 </div>
             </footer>

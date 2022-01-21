@@ -1,7 +1,7 @@
 namespace :dev do
 
 DEFAULT_PASSWORD = '@tivos2022'
-#DEFAULT_FILE_PATH = File.join(Rails.root, 'lib', 'tmp')
+DEFAULT_FILE_PATH = File.join(Rails.root, 'lib', 'tmp')
 
   desc "Configura o ambiente de desenvolvimento"
   task setup: :environment do
@@ -10,6 +10,7 @@ DEFAULT_PASSWORD = '@tivos2022'
     show_spinner("Criando BD...") { %x(rails db:create) }
     show_spinner("Migrando BD...") { %x(rails db:migrate) }
     show_spinner("Admin padrão...") { %x(rails dev:add_default_admin) }
+    show_spinner("Tipos...") { %x(rails dev:add_types) }
   else
     puts "Você não esta em ambiente de desenvolvimento!"
   end
@@ -24,15 +25,15 @@ end
     )
   end
   
-  #desc "Adiciona o pagamento padrão"
-  #task add_payments: :environment do
-  #  file_name = 'payment.txt'
-  #  file_path = File.join(DEFAULT_FILE_PATH, file_name)
+  desc "Adiciona o pagamento padrão"
+  task add_types: :environment do
+    file_name = 'types.txt'
+    file_path = File.join(DEFAULT_FILE_PATH, file_name)
 
-  #  File.open(file_path, 'r').each do |line|
-  #    Payment.create!(type: line.strip)
-  #  end
-  #end
+    File.open(file_path, 'r').each do |line|
+      Type.create!(description: line.strip)
+    end
+  end
   
 
 
