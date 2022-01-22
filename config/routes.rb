@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   namespace :admins_ativo do
+    resources :admins
     resources :types
   end
   namespace :admins_ativo do

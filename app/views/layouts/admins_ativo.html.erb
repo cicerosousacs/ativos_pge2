@@ -143,12 +143,20 @@
                                 <span class="d-lg-inline text-gray-800"><%= current_admin.email %></span>
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                <a>
-                                  <%= link_to destroy_admin_session_path, method: :delete do %>
-                                    <i class="fas fa-sign-out-alt fa-lg fa-fw "></i> Sair 
-                                  <% end %>
-                                </a>
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in">
+                              <a class="dropdown">
+                                <%= link_to admins_ativo_admins_path do %>
+                                  <i class="fas fa-user fa-lg fa-fw mr-2 text-gray-800"></i>
+                                  Gerenciar
+                                <% end %>
+                              </a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown">
+                                <%= link_to destroy_admin_session_path, method: :delete do %>
+                                  <i class="fas fa-sign-out-alt fa-lg fa-fw mr-2 text-gray-800"></i> 
+                                  Sair 
+                                <% end %>
+                              </a>
                             </div>
                         </li>
                     </ul>
