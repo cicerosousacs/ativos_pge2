@@ -4,4 +4,37 @@ class AdminsAtivo::TypesController < AdminsAtivoController
     @types = Type.all
   end
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 end
