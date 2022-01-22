@@ -1,0 +1,10 @@
+<%= form_with(model: [ :admins_ativo, @type ], local: true ) do |form| %>
+
+  <div class="form-group">
+    <%= form.label :type %> <br>
+    <%= form.text_field :description, class:"form-control-label" %>
+  </div>
+
+  <button type="submit" class="btn btn-sm btn-primary">Salvar</button>
+
+<% end %>

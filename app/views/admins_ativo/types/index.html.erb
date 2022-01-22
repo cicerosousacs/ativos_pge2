@@ -11,7 +11,7 @@
     <tr>
       <th>
         <%= link_to new_admins_ativo_type_path do %>
-          <i class="fa fa-plus"></i>
+          <i class="fa fa-plus" style="color:green"></i>
         <% end %> 
       </th>
     </tr>
@@ -26,7 +26,7 @@
           <% end %>
         <td style="width: 10px">
           <%= link_to admins_ativo_type_path(type), method: :delete, data: {confirm: "Certeza?"} do %>
-            <i class="fa fa-trash"></i>
+            <i class="fa fa-trash" style="color:red"></i>
           <% end %>  
         </td>
       </tr>
