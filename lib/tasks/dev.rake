@@ -19,13 +19,13 @@ end
   desc "Adiciona o administrador padrão"
   task add_default_admin: :environment do
     Admin.create!(
-      email: 'admin@admin.com',
+      email: 'admin@ativos.com',
       password: DEFAULT_PASSWORD,
       password_confirmation: DEFAULT_PASSWORD
     )
   end
   
-  desc "Adiciona o pagamento padrão"
+  desc "Adiciona o Tipos padrão"
   task add_types: :environment do
     file_name = 'types.txt'
     file_path = File.join(DEFAULT_FILE_PATH, file_name)
@@ -34,14 +34,6 @@ end
       Type.create!(description: line.strip)
     end
   end
-  
-
-
-
-
-
-
-
 
   private
    

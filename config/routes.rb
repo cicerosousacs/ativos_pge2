@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   namespace :admins_ativo do
     resources :admins
     resources :types
+    resources :areas
+    resources :subareas
   end
   namespace :admins_ativo do
     get 'welcome/index'

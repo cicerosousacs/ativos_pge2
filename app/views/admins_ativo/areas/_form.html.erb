@@ -1,9 +1,8 @@
-
-<% if @type.errors.any? %>
+<% if @area.errors.any? %>
     <div class="alert alert-danger alert-dismissable">
     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
         <ul>
-            <% @type.errors.full_messages.each do |message| %>
+            <% @area.errors.full_messages.each do |message| %>
                 <li><%= message %></li>
             <% end %>
         </ul>
@@ -11,10 +10,10 @@
 <% end %>
 
 
-<%= form_with(model: [ :admins_ativo, @type ], local: true ) do |form| %>
+<%= form_with(model: [ :admins_ativo, @area ], local: true ) do |form| %>
 
   <div class="form-group">
-    <%= form.label :type %> <br>
+    <%= form.label :area %> <br>
     <%= form.text_field :description, class:"form-control" %>
   </div>
 
