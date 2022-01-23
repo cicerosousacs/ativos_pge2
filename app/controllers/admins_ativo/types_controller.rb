@@ -5,7 +5,6 @@ class AdminsAtivo::TypesController < AdminsAtivoController
     @types = Type.all
   end
 
-
   def new
     @type = Type.new
   end

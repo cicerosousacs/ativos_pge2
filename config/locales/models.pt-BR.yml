@@ -4,6 +4,15 @@
       admin:
         one: Administradores
         other: Administradores
+      condition:
+        one: Condição
+        other: Condições
+      situation:
+        one: Situação
+        other: Situações
+      type:
+        one: Tipo
+        other: Tipos
     attributes:
       admin:
         id: Código
@@ -13,3 +22,13 @@
         updated_at: Atualizado em
         password: Senha
         password_confirmation: Confirmação de Senha
+      condition:
+        id: Código
+        condition: Condição
+      situation:
+        id: Código
+        situation: Status da Condição
+        condition_id: Condição
+      type:
+        id: Código
+        type: Tipo

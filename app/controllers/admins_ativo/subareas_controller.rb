@@ -3,7 +3,7 @@ class AdminsAtivo::SubareasController < AdminsAtivoController
   before_action :set_area_options, only: [:new, :create, :edit, :update]
 
   def index
-    @subareas = Subarea.all
+    @subareas = Subarea.includes(:area)
   end
 
   def new
@@ -37,7 +37,6 @@ class AdminsAtivo::SubareasController < AdminsAtivoController
       render :index
     end
   end
-
 
   private
 

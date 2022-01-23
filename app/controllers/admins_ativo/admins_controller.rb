@@ -1,6 +1,5 @@
 class AdminsAtivo::AdminsController < AdminsAtivoController
   before_action :set_admin, only: [:edit, :update, :destroy]
-  before_action :set_extract, only: [:edit, :update]
 
   def index
     @admins = Admin.all
@@ -46,12 +45,6 @@ class AdminsAtivo::AdminsController < AdminsAtivoController
 
   def set_admin
     @admin = Admin.find(params[:id])
-  end
-
-  def set_extract
-    if params[:admin][:password].blank? && params[:admin][:password_confirmation].blank?
-      params[:admin].extract!(:password, :password_confirmation)
-    end
   end
 
 end
