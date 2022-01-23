@@ -39,7 +39,7 @@
             <li class="nav-item active">
               <%= link_to admins_ativo_welcome_index_path do %>
                 <i class="nav-link fas fa-fw fa-tachometer-alt">
-                  Dashboard</i>
+                  <span style="font-family:Verdana;">Dashboard</span></i>
               <% end %>     
             </li>
             <!-- Divider -->
@@ -48,14 +48,14 @@
             <li class="nav-item active">
               <%= link_to admins_ativo_ativos_path do %>
                 <i class="nav-link fas fa-fw fa-desktop">
-                  Ativos</i>
+                  <span style="font-family:Tahoma;">Ativos</span></i>
               <% end %>
             </li>
             <!-- Nav Item - Tables -->
             <li class="nav-item active">
               <%= link_to admins_ativo_vinculos_path do %>
                 <i class="nav-link fas fa-fw fa-sitemap">
-                  Vinculos</i>
+                  <span style="font-family:Tahoma;">Vinculos</span></i>
                 <% end %>
             </li>
             <!-- Divider -->
@@ -65,7 +65,7 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-file"></i>
-                    <span>Relatorios</span>
+                    <span style="font-family:Tahoma;">Relatorios</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -80,7 +80,7 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
-                    <span>Outros</span>
+                    <span style="font-family:Tahoma;">Outros</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
@@ -138,21 +138,21 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="d-lg-inline text-gray-800"><%= current_admin.email %></span>
+                                <span class="d-lg-inline text-gray-600" style="font-family:Tahoma;"><%= current_admin.email %></span>
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in">
                               <a class="dropdown">
                                 <%= link_to admins_ativo_admins_path do %>
                                   <i class="fas fa-user fa-lg fa-fw mr-2 text-gray-800"></i>
-                                  Gerenciar
+                                  <span style="font-family:Tahoma;">Gerenciar</span>
                                 <% end %>
                               </a>
                               <div class="dropdown-divider"></div>
                               <a class="dropdown">
                                 <%= link_to destroy_admin_session_path, method: :delete do %>
                                   <i class="fas fa-sign-out-alt fa-lg fa-fw mr-2 text-gray-800"></i> 
-                                  Sair 
+                                  <span style="font-family:Tahoma;">Sair</span> 
                                 <% end %>
                               </a>
                             </div>
