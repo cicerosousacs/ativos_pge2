@@ -3,7 +3,7 @@ class AdminsAtivo::SubareasController < AdminsAtivoController
   before_action :set_area_options, only: [:new, :create, :edit, :update]
 
   def index
-    @subareas = Subarea.includes(:area)
+    @subareas = Subarea.includes(:area).page(params[:page])
   end
 
   def new

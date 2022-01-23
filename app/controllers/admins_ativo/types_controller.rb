@@ -2,7 +2,7 @@ class AdminsAtivo::TypesController < AdminsAtivoController
   before_action :set_type, only: [:edit, :update, :destroy]
 
   def index
-    @types = Type.all
+    @types = Type.all.page(params[:page])
   end
 
   def new
