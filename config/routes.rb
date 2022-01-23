@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     resources :subareas
     resources :conditions
     resources :situations
+    resources :ativos
+    resources :vinculos
   end
   namespace :admins_ativo do
     get 'welcome/index'

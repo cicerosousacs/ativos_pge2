@@ -35,30 +35,28 @@
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
-
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
               <%= link_to admins_ativo_welcome_index_path do %>
                 <i class="nav-link fas fa-fw fa-tachometer-alt">
-                Dashboard</i>
+                  Dashboard</i>
               <% end %>     
             </li>
-
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
-
             <!-- Nav Item - Charts -->
             <li class="nav-item active">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-desktop"></i>
-                    <span>Ativos</span></a>
+              <%= link_to admins_ativo_ativos_path do %>
+                <i class="nav-link fas fa-fw fa-desktop">
+                  Ativos</i>
+              <% end %>
             </li>
-
             <!-- Nav Item - Tables -->
             <li class="nav-item active">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-sitemap"></i>
-                    <span>Vinculos</span></a>
+              <%= link_to admins_ativo_vinculos_path do %>
+                <i class="nav-link fas fa-fw fa-sitemap">
+                  Vinculos</i>
+                <% end %>
             </li>
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
