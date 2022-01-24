@@ -1,3 +1,8 @@
 class ApplicationController < ActionController::Base
-    layout 'admins_session'
+    layout :layout_ativos
+
+    private
+
+    def layout_ativos
+    end
 end
