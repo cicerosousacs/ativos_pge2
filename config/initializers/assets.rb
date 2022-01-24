@@ -11,11 +11,14 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
+
 #/views/layout
-Rails.application.config.assets.precompile += %w( admins_ativo.js admins_ativo.css )
+Rails.application.config.assets.precompile += %w( admins_ativo.js admins_ativo.css
+                                                  admins_session.js admins_session.css )
 
 #/lib/assets
-Rails.application.config.assets.precompile += %w( sb-admin-2.min.js sb-admin-2.min.css )
+Rails.application.config.assets.precompile += %w( sb-admin-2.min.js sb-admin-2.min.css
+                                                  scripts.js styles.css )
 
 #vendor/assets
 Rails.application.config.assets.precompile += %w( bootstrap/js/bootstrap.bundle.min.js )
