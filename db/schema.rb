@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_25_182506) do
+ActiveRecord::Schema.define(version: 2022_01_25_201047) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -28,6 +28,22 @@ ActiveRecord::Schema.define(version: 2022_01_25_182506) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "ativos", force: :cascade do |t|
+    t.integer "type_id"
+    t.string "description"
+    t.string "serial"
+    t.string "tombo"
+    t.text "specification"
+    t.string "invoice"
+    t.date "date_acquisition"
+    t.string "warranty"
+    t.string "ata"
+    t.string "bidding"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["type_id"], name: "index_ativos_on_type_id"
   end
 
   create_table "conditions", force: :cascade do |t|

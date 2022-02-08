@@ -13,6 +13,9 @@
       type:
         one: Tipo
         other: Tipos
+      ativo:
+        one: Ativo
+        other: Ativos
     attributes:
       admin:
         id: Código
@@ -32,3 +35,15 @@
       type:
         id: Código
         type: Tipo
+      ativo:
+        id: Código
+        type: Tipo
+        description: Descrição
+        serial: Serial
+        tombo: Tombo
+        specification: Especificaçôes
+        invoice: Nota Fiscal
+        date_acquisition: Data da Aquisição
+        warranty: Garantia
+        ata: Ata
+        bidding: Licitação

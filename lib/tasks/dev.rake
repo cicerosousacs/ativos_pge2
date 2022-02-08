@@ -25,7 +25,7 @@ end
     )
   end
   
-  desc "Adiciona o Tipos padrão"
+  desc "Adicionando Tipos"
   task add_types: :environment do
     file_name = 'types.txt'
     file_path = File.join(DEFAULT_FILE_PATH, file_name)
