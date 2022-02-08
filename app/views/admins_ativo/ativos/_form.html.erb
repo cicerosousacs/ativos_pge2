@@ -1,0 +1,59 @@
+<% if @ativo.errors.any? %>
+    <div class="alert alert-danger alert-dismissable">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <ul>
+            <% @ativo.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+        </ul>
+    </div>
+<% end %>
+
+
+
+<%= form_with(model: [ :admins_ativo, @ativo ], local: true ) do |form| %>
+
+  <div class="form-group">
+    <%= form.label :type %> <br>
+    <%= form.select("type_id", @type_options, {include_blank: 'Selecione...'}, class:"form-control bg-light border-6 small") %>
+  </div>
+  <div class="form-group">
+    <%= form.label :description %> <br>
+    <%= form.text_field :description, class:"form-control bg-light border-6 small" %>
+  </div>
+    <div class="form-group">
+    <%= form.label :serial %> <br>
+    <%= form.text_field :serial, class:"form-control bg-light border-6 small" %>
+  </div>
+    <div class="form-group">
+    <%= form.label :tombo %> <br>
+    <%= form.text_field :tombo, class:"form-control bg-light border-6 small" %>
+  </div>
+    <div class="form-group">
+    <%= form.label :specification %> <br>
+    <%= form.text_field :specification, class:"form-control bg-light border-6 small" %>
+  </div>
+    <div class="form-group">
+    <%= form.label :invoice %> <br>
+    <%= form.text_field :invoice, class:"form-control bg-light border-6 small" %>
+  </div>
+    <div class="form-group">
+    <%= form.label :date_acquisition %> <br>
+    <%= form.date_select :date_acquisition, class:"form-control bg-light border-6 small" %>
+  </div>
+    <div class="form-group">
+    <%= form.label :warranty %> <br>
+    <%= form.text_field :warranty, class:"form-control bg-light border-6 small" %>
+  </div>
+      <div class="form-group">
+    <%= form.label :ata %> <br>
+    <%= form.text_field :ata, class:"form-control bg-light border-6 small" %>
+  </div>
+    <div class="form-group">
+    <%= form.label :bidding %> <br>
+    <%= form.text_field :bidding, class:"form-control bg-light border-6 small" %>
+  </div>
+
+  <button type="submit" class="btn btn-sm btn-primary">Salvar</button>
+
+<% end %>

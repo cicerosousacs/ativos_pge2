@@ -1,0 +1,2 @@
+module AdminsAtivo::SituationsHelper
+end

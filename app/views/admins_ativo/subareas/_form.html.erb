@@ -1,0 +1,28 @@
+
+<% if @subarea.errors.any? %>
+    <div class="alert alert-danger alert-dismissable">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <ul>
+            <% @subarea.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+        </ul>
+    </div>
+<% end %>
+
+
+<%= form_with(model: [ :admins_ativo, @subarea ], local: true ) do |form| %>
+
+  <div class="form-group">
+    <%= form.label :area_id %> <br>
+    <%= form.select("area_id", @area_options, { include_blank: 'Selecione...'}, class:"form-control") %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :subarea %> <br>
+    <%= form.text_field :description, class:"form-control" %>
+  </div>
+
+  <button type="submit" class="btn btn-sm btn-primary">Salvar</button>
+
+<% end %>
