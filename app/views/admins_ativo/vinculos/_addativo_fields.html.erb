@@ -1,7 +1,7 @@
 <div class="nested-fields">
   <div class="control">
     <%= f.label :tombo %> <br>
-    <%= f.text_field :tombo %>
+    <%= f.select("id", @ativos.collect { |a| [a.tombo, a.id] }, { include_blank: 'Selecione...' }) %>
 
     <%= f.label :description %> <br>
     <%= f.text_field :description %>
