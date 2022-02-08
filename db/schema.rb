@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_25_201047) do
+ActiveRecord::Schema.define(version: 2022_02_08_004952) do
+
+  create_table "addativos", force: :cascade do |t|
+    t.integer "vinculo_id"
+    t.string "tombo"
+    t.string "description"
+    t.string "condition"
+    t.string "situation"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["vinculo_id"], name: "index_addativos_on_vinculo_id"
+  end
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -78,6 +89,18 @@ ActiveRecord::Schema.define(version: 2022_01_25_201047) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "vinculos", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "area_id"
+    t.integer "subarea_id"
+    t.string "detvinculo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["area_id"], name: "index_vinculos_on_area_id"
+    t.index ["subarea_id"], name: "index_vinculos_on_subarea_id"
+    t.index ["user_id"], name: "index_vinculos_on_user_id"
   end
 
 end

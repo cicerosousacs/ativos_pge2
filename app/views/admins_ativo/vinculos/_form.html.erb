@@ -1,0 +1,46 @@
+<% if @vinculo.errors.any? %>
+    <div class="alert alert-danger alert-dismissable">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <ul>
+            <% @vinculo.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+        </ul>
+    </div>
+<% end %>
+
+
+
+<%= form_with(model: [ :admins_ativo, @vinculo ], local: true ) do |form| %>
+
+  <div class="form-group">
+    <%= form.label :user %> <br>
+    <%= form.select("user_id", @user_option, {include_blank: 'Selecione...'}, class:"form-control bg-light border-6 small") %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :area %> <br>
+    <%= form.select("area_id", @area_option, {include_blank: 'Selecione...'}, class:"form-control bg-light border-6 small") %>
+  </div>
+  
+  <div class="form-group">
+    <%= form.label :subarea %> <br>
+    <%= form.select("subarea_id", @subarea_option, {include_blank: 'Selecione...'}, class:"form-control bg-light border-6 small") %>
+  </div>
+  
+  <div class="form-group">
+    <%= form.label :detvinculo %> <br>
+    <%= form.text_field :detvinculo, class:"form-control bg-light border-6 small" %>
+  </div>
+
+  <div id='addativos'>
+    <%= form.fields_for :addativos do |addativo| %>
+      <%= render partial: "addativo_fields", locals: { f: addativo } %>
+    <% end %>
+
+    <%= link_to_add_association "Incluir Ativo", form, :addativos %>
+  </div>
+
+  <button type="submit" class="btn btn-sm btn-primary">Salvar</button>
+
+<% end %>
