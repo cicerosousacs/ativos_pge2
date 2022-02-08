@@ -1,5 +1,4 @@
 class Ativo < ApplicationRecord
-  belongs_to :vinculo
   belongs_to :type
   paginates_per 10
 
