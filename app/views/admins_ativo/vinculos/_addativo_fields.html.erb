@@ -1,7 +1,7 @@
 <div class="control-group nested-fields">
   <div class="controls">
     <%= f.label :tombo %>
-    <%= f.select("id", @ativos.collect { |a| [a.tombo, a.id] }, { include_blank: 'Selecione...' })%>
+    <%= f.collection_select(:ativo_id, {}, :id, :tombo, {})%>
 
     <%= f.label :description %>
     <%= f.select("id", @ativos.collect { |a| [a.description, a.id] }, { include_blank: 'Selecione...' })%>
