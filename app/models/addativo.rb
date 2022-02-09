@@ -1,3 +1,3 @@
 class Addativo < ApplicationRecord
-  belongs_to :vinculo
+  belongs_to :vinculo#, inverse_of: :addativos
 end

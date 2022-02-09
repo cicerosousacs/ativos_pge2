@@ -33,10 +33,14 @@
     <%= form.text_field :detvinculo, class:"form-control bg-light border-6 small" %>
   </div>
 
+<h5>Ativos Vinculados</h5>
+
   <div class="links">
-    <%= link_to_add_association "Incluir Ativo", form, :addativos,
+    <%= link_to_add_association(form, :addativos, class: "btn-sm btn-success",
       'data-association-insertion-node' => "#addativos",
-      'data-association-insertion-method' => "append" %>
+      'data-association-insertion-method' => "append") do %>
+      <i class="fa fa-plus" style="color:white"></i>
+    <% end %>
   </div>
 
   <hr/>
