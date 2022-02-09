@@ -17,6 +17,9 @@ class AdminsAtivo::VinculosController < AdminsAtivoController
   end
 
   def create
+    @ativos = Ativo.all
+    @conditions = Condition.all
+    @situations = Situation.all
     @vinculo = Vinculo.new(params_vinculo)
     if @vinculo.save()
       redirect_to admins_ativo_vinculos_path, notice: "Vinculo criado. Parabéns!"
@@ -59,7 +62,7 @@ class AdminsAtivo::VinculosController < AdminsAtivoController
       :area_id, 
       :subarea_id, 
       :detvinculo,    
-      addativos_attributes: [:id, :ativo_id, :tombo, :description, :condition, :situation, :_destroy])
+      addativos_attributes: [:id, :tombo, :description, :condition, :situation, :_destroy])
   end
 
   def set_user_option
