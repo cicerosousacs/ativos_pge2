@@ -45,7 +45,7 @@ class AdminsAtivo::VinculosController < AdminsAtivoController
   private
 
   def set_vinculo
-    @vinculo = Vinculo.find_by(params[:id])
+    @vinculo = Vinculo.find(params[:id])
   end
 
   def params_vinculo
