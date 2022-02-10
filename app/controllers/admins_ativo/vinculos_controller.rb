@@ -3,6 +3,7 @@ class AdminsAtivo::VinculosController < AdminsAtivoController
   before_action :set_user_option, only: [:new, :create, :edit, :update]
   before_action :set_area_option, only: [:new, :create, :edit, :update]
   before_action :set_subarea_option, only: [:new, :create, :edit, :update]
+  before_action :set_selects_options, only: [:new, :create, :edit, :update]
 
   def index
     @vinculos = Vinculo.includes(:user, :area, :subarea)
@@ -11,9 +12,6 @@ class AdminsAtivo::VinculosController < AdminsAtivoController
   def new
     @vinculo = Vinculo.new
     #@addativos = @vinculo.addativos.build
-    @ativos = Ativo.all
-    @conditions = Condition.all
-    @situations = Situation.all
   end
 
   def create
@@ -26,9 +24,6 @@ class AdminsAtivo::VinculosController < AdminsAtivoController
   end
 
   def edit
-    @ativos = Ativo.all
-    @conditions = Condition.all
-    @situations = Situation.all
   end
 
   def update
@@ -50,7 +45,7 @@ class AdminsAtivo::VinculosController < AdminsAtivoController
   private
 
   def set_vinculo
-    @vinculo = Vinculo.find(params[:id])
+    @vinculo = Vinculo.find_by(params[:id])
   end
 
   def params_vinculo
@@ -72,6 +67,12 @@ class AdminsAtivo::VinculosController < AdminsAtivoController
 
   def set_subarea_option
     @subarea_option = Subarea.all.pluck(:description, :id)
+  end
+
+  def set_selects_options
+    @ativos = Ativo.all
+    @conditions = Condition.all
+    @situations = Situation.all
   end
 
 end
