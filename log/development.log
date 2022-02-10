@@ -48280,3 +48280,364 @@ Completed 404 Not Found in 19ms (ActiveRecord: 4.2ms)
 ActiveRecord::RecordNotFound (Couldn't find Addativo with ID=1 for Vinculo with ID=10):
   
 app/controllers/admins_ativo/vinculos_controller.rb:30:in `update'
+Started PATCH "/admins_ativo/vinculos/10" for 10.0.2.2 at 2022-02-10 01:35:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminsAtivo::VinculosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BGXKYfbWJlSdh6hTFBjsKTh8t/1k/LOeFCcwYnz/MY/ai9cFy05G5N1t/YKDRu3BN+9UZYWbkrquYPnZNKSD6A==", "vinculo"=>{"user_id"=>"3", "area_id"=>"1", "subarea_id"=>"1", "detvinculo"=>"Teste", "addativos_attributes"=>{"1644456838680"=>{"id"=>"1", "_destroy"=>"false"}}}, "commit"=>"Salvar", "id"=>"10"}
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.9/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mVinculo Load (0.7ms)[0m  [1m[34mSELECT  "vinculos".* FROM "vinculos" WHERE "vinculos"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:48
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "users"."name", "users"."id" FROM "users"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:56
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "areas"."description", "areas"."id" FROM "areas"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:60
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "subareas"."description", "subareas"."id" FROM "subareas"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:64
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:30
+  [1m[36mAddativo Load (0.7ms)[0m  [1m[34mSELECT "addativos".* FROM "addativos" WHERE "addativos"."vinculo_id" = ? AND "addativos"."id" = ?[0m  [["vinculo_id", 10], ["id", 1]]
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:30
+Completed 404 Not Found in 24ms (ActiveRecord: 4.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Addativo with ID=1 for Vinculo with ID=10):
+  
+app/controllers/admins_ativo/vinculos_controller.rb:30:in `update'
+Started PATCH "/admins_ativo/vinculos/10" for 10.0.2.2 at 2022-02-10 01:35:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.9/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by AdminsAtivo::VinculosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BGXKYfbWJlSdh6hTFBjsKTh8t/1k/LOeFCcwYnz/MY/ai9cFy05G5N1t/YKDRu3BN+9UZYWbkrquYPnZNKSD6A==", "vinculo"=>{"user_id"=>"3", "area_id"=>"1", "subarea_id"=>"1", "detvinculo"=>"Teste", "addativos_attributes"=>{"1644456838680"=>{"id"=>"1", "_destroy"=>"false"}}}, "commit"=>"Salvar", "id"=>"10"}
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.9/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mVinculo Load (1.2ms)[0m  [1m[34mSELECT  "vinculos".* FROM "vinculos" WHERE "vinculos"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:48
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "users"."name", "users"."id" FROM "users"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:61
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "areas"."description", "areas"."id" FROM "areas"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:65
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "subareas"."description", "subareas"."id" FROM "subareas"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:69
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:30
+  [1m[36mAddativo Load (1.7ms)[0m  [1m[34mSELECT "addativos".* FROM "addativos" WHERE "addativos"."vinculo_id" = ? AND "addativos"."id" = ?[0m  [["vinculo_id", 10], ["id", 1]]
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:30
+Completed 404 Not Found in 227ms (ActiveRecord: 16.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Addativo with ID=1 for Vinculo with ID=10):
+  
+app/controllers/admins_ativo/vinculos_controller.rb:30:in `update'
+Started GET "/admins_ativo/vinculos/10/edit" for 10.0.2.2 at 2022-02-10 01:35:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminsAtivo::VinculosController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.9/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mVinculo Load (0.7ms)[0m  [1m[34mSELECT  "vinculos".* FROM "vinculos" WHERE "vinculos"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:48
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "users"."name", "users"."id" FROM "users"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:61
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "areas"."description", "areas"."id" FROM "areas"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:65
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "subareas"."description", "subareas"."id" FROM "subareas"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:69
+  Rendering admins_ativo/vinculos/edit.html.erb within layouts/admins_ativo
+  [1m[36mAtivo Load (1.9ms)[0m  [1m[34mSELECT "ativos".* FROM "ativos"[0m
+  ↳ app/views/admins_ativo/vinculos/_addativo_fields.html.erb:4
+  Rendered admins_ativo/vinculos/_addativo_fields.html.erb (35.7ms)
+  [1m[36mAddativo Load (0.9ms)[0m  [1m[34mSELECT "addativos".* FROM "addativos" WHERE "addativos"."vinculo_id" = ?[0m  [["vinculo_id", 10]]
+  ↳ app/views/admins_ativo/vinculos/_form.html.erb:48
+  Rendered admins_ativo/vinculos/_form.html.erb (364.4ms)
+  Rendered admins_ativo/vinculos/edit.html.erb within layouts/admins_ativo (370.0ms)
+Completed 200 OK in 2535ms (Views: 2511.1ms | ActiveRecord: 7.8ms)
+
+
+Started PATCH "/admins_ativo/vinculos/10" for 10.0.2.2 at 2022-02-10 01:35:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminsAtivo::VinculosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UMToLkEtZhB/ieXS5rEi9pi/DR8Nw9De78i4KY6D1raOKvVKfLUGoD9jsANx7yMelyzuh+yk8fpVj3GSxthk0Q==", "vinculo"=>{"user_id"=>"3", "area_id"=>"1", "subarea_id"=>"1", "detvinculo"=>"Teste", "addativos_attributes"=>{"1644456966030"=>{"id"=>"1", "_destroy"=>"false"}}}, "commit"=>"Salvar", "id"=>"10"}
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.9/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mVinculo Load (0.5ms)[0m  [1m[34mSELECT  "vinculos".* FROM "vinculos" WHERE "vinculos"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:48
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "users"."name", "users"."id" FROM "users"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:61
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "areas"."description", "areas"."id" FROM "areas"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:65
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "subareas"."description", "subareas"."id" FROM "subareas"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:69
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:30
+  [1m[36mAddativo Load (1.1ms)[0m  [1m[34mSELECT "addativos".* FROM "addativos" WHERE "addativos"."vinculo_id" = ? AND "addativos"."id" = ?[0m  [["vinculo_id", 10], ["id", 1]]
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:30
+Completed 404 Not Found in 21ms (ActiveRecord: 4.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Addativo with ID=1 for Vinculo with ID=10):
+  
+app/controllers/admins_ativo/vinculos_controller.rb:30:in `update'
+Started GET "/admins_ativo/vinculos/10/edit" for 10.0.2.2 at 2022-02-10 01:36:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminsAtivo::VinculosController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mAdmin Load (1.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.9/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mVinculo Load (0.6ms)[0m  [1m[34mSELECT  "vinculos".* FROM "vinculos" WHERE "vinculos"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:48
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "users"."name", "users"."id" FROM "users"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:61
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "areas"."description", "areas"."id" FROM "areas"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:65
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "subareas"."description", "subareas"."id" FROM "subareas"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:69
+  Rendering admins_ativo/vinculos/edit.html.erb within layouts/admins_ativo
+  Rendered admins_ativo/vinculos/_addativo_fields.html.erb (1.7ms)
+  Rendered admins_ativo/vinculos/_form.html.erb (26.2ms)
+  Rendered admins_ativo/vinculos/edit.html.erb within layouts/admins_ativo (33.3ms)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 3.3ms)
+
+
+  
+SyntaxError (/vagrant/ativos_pge/app/views/admins_ativo/vinculos/_addativo_fields.html.erb:4: syntax error, unexpected ')', expecting keyword_end
+...clude_blank: 'Selecione...' }));@output_buffer.safe_append='
+...                              ^):
+  
+app/views/admins_ativo/vinculos/_addativo_fields.html.erb:4: syntax error, unexpected ')', expecting keyword_end
+app/views/admins_ativo/vinculos/_form.html.erb:39:in `block in _app_views_admins_ativo_vinculos__form_html_erb__443217309380488697_70154342755160'
+app/views/admins_ativo/vinculos/_form.html.erb:14:in `_app_views_admins_ativo_vinculos__form_html_erb__443217309380488697_70154342755160'
+app/views/admins_ativo/vinculos/edit.html.erb:1:in `_app_views_admins_ativo_vinculos_edit_html_erb___2417288413997864398_70154342842440'
+Started GET "/admins_ativo/vinculos/10/edit" for 10.0.2.2 at 2022-02-10 01:36:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminsAtivo::VinculosController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.9/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mVinculo Load (0.3ms)[0m  [1m[34mSELECT  "vinculos".* FROM "vinculos" WHERE "vinculos"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:48
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "users"."name", "users"."id" FROM "users"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:61
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "areas"."description", "areas"."id" FROM "areas"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:65
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "subareas"."description", "subareas"."id" FROM "subareas"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:69
+  Rendering admins_ativo/vinculos/edit.html.erb within layouts/admins_ativo
+  [1m[36mAtivo Load (1.4ms)[0m  [1m[34mSELECT "ativos".* FROM "ativos"[0m
+  ↳ app/views/admins_ativo/vinculos/_addativo_fields.html.erb:4
+  Rendered admins_ativo/vinculos/_addativo_fields.html.erb (38.1ms)
+  Rendered admins_ativo/vinculos/_form.html.erb (61.7ms)
+  Rendered admins_ativo/vinculos/edit.html.erb within layouts/admins_ativo (67.7ms)
+Completed 500 Internal Server Error in 94ms (ActiveRecord: 3.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `ativo_ids' for #<Addativo:0x00007f9c2a281630>):
+    1: <div class="control-group nested-fields">
+    2:   <div class="controls">
+    3:     <%= f.label :tombo %>
+    4:     <%= f.select :ativo_ids, Ativo.all.collect { |a| [a.tombo, a.id] }, { include_blank: 'Selecione...' }%>
+    5: 
+    6: 
+    7: 
+  
+app/views/admins_ativo/vinculos/_addativo_fields.html.erb:4:in `_app_views_admins_ativo_vinculos__addativo_fields_html_erb___115788619640153633_70154349440640'
+app/views/admins_ativo/vinculos/_form.html.erb:39:in `block in _app_views_admins_ativo_vinculos__form_html_erb__443217309380488697_70154349486020'
+app/views/admins_ativo/vinculos/_form.html.erb:14:in `_app_views_admins_ativo_vinculos__form_html_erb__443217309380488697_70154349486020'
+app/views/admins_ativo/vinculos/edit.html.erb:1:in `_app_views_admins_ativo_vinculos_edit_html_erb___2417288413997864398_70154349499540'
+Started GET "/admins_ativo/vinculos/10/edit" for 10.0.2.2 at 2022-02-10 01:37:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminsAtivo::VinculosController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.9/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mVinculo Load (0.9ms)[0m  [1m[34mSELECT  "vinculos".* FROM "vinculos" WHERE "vinculos"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:48
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "users"."name", "users"."id" FROM "users"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:61
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "areas"."description", "areas"."id" FROM "areas"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:65
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "subareas"."description", "subareas"."id" FROM "subareas"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:69
+  Rendering admins_ativo/vinculos/edit.html.erb within layouts/admins_ativo
+  [1m[36mAtivo Load (1.0ms)[0m  [1m[34mSELECT "ativos".* FROM "ativos"[0m
+  ↳ app/views/admins_ativo/vinculos/_addativo_fields.html.erb:4
+  Rendered admins_ativo/vinculos/_addativo_fields.html.erb (98.7ms)
+  Rendered admins_ativo/vinculos/_form.html.erb (123.4ms)
+  Rendered admins_ativo/vinculos/edit.html.erb within layouts/admins_ativo (129.1ms)
+Completed 500 Internal Server Error in 170ms (ActiveRecord: 4.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `#<Ativo::ActiveRecord_Relation:0x00007f9c29f55b50>' for #<Addativo:0x00007f9c29e1bcf8>):
+    1: <div class="control-group nested-fields">
+    2:   <div class="controls">
+    3:     <%= f.label :tombo %>
+    4:     <%= f.select @ativos, Ativo.all.collect { |a| [a.tombo, a.id] }, { include_blank: 'Selecione...' }%>
+    5: 
+    6: 
+    7: 
+  
+app/views/admins_ativo/vinculos/_addativo_fields.html.erb:4:in `_app_views_admins_ativo_vinculos__addativo_fields_html_erb___115788619640153633_70154347126680'
+app/views/admins_ativo/vinculos/_form.html.erb:39:in `block in _app_views_admins_ativo_vinculos__form_html_erb__443217309380488697_70154347655320'
+app/views/admins_ativo/vinculos/_form.html.erb:14:in `_app_views_admins_ativo_vinculos__form_html_erb__443217309380488697_70154347655320'
+app/views/admins_ativo/vinculos/edit.html.erb:1:in `_app_views_admins_ativo_vinculos_edit_html_erb___2417288413997864398_70154347782760'
+Started GET "/admins_ativo/vinculos/10/edit" for 10.0.2.2 at 2022-02-10 01:37:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminsAtivo::VinculosController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mAdmin Load (5.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.9/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mVinculo Load (0.5ms)[0m  [1m[34mSELECT  "vinculos".* FROM "vinculos" WHERE "vinculos"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:48
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "users"."name", "users"."id" FROM "users"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:61
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "areas"."description", "areas"."id" FROM "areas"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:65
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "subareas"."description", "subareas"."id" FROM "subareas"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:69
+  Rendering admins_ativo/vinculos/edit.html.erb within layouts/admins_ativo
+  [1m[36mAtivo Load (1.0ms)[0m  [1m[34mSELECT "ativos".* FROM "ativos"[0m
+  ↳ app/views/admins_ativo/vinculos/_addativo_fields.html.erb:4
+  Rendered admins_ativo/vinculos/_addativo_fields.html.erb (17.5ms)
+  Rendered admins_ativo/vinculos/_form.html.erb (42.8ms)
+  Rendered admins_ativo/vinculos/edit.html.erb within layouts/admins_ativo (48.5ms)
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 7.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `' for #<Addativo:0x00007f9c1852dee0>):
+    1: <div class="control-group nested-fields">
+    2:   <div class="controls">
+    3:     <%= f.label :tombo %>
+    4:     <%= f.select @ativo, Ativo.all.collect { |a| [a.tombo, a.id] }, { include_blank: 'Selecione...' }%>
+    5: 
+    6: 
+    7: 
+  
+app/views/admins_ativo/vinculos/_addativo_fields.html.erb:4:in `_app_views_admins_ativo_vinculos__addativo_fields_html_erb___115788619640153633_70154199834100'
+app/views/admins_ativo/vinculos/_form.html.erb:39:in `block in _app_views_admins_ativo_vinculos__form_html_erb__443217309380488697_70154200024560'
+app/views/admins_ativo/vinculos/_form.html.erb:14:in `_app_views_admins_ativo_vinculos__form_html_erb__443217309380488697_70154200024560'
+app/views/admins_ativo/vinculos/edit.html.erb:1:in `_app_views_admins_ativo_vinculos_edit_html_erb___2417288413997864398_70154200122220'
+Started GET "/admins_ativo/vinculos/10/edit" for 10.0.2.2 at 2022-02-10 01:38:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.9/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by AdminsAtivo::VinculosController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.9/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mVinculo Load (0.7ms)[0m  [1m[34mSELECT  "vinculos".* FROM "vinculos" WHERE "vinculos"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:48
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "users"."name", "users"."id" FROM "users"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:61
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "areas"."description", "areas"."id" FROM "areas"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:65
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "subareas"."description", "subareas"."id" FROM "subareas"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:69
+  Rendering admins_ativo/vinculos/edit.html.erb within layouts/admins_ativo
+  [1m[36mAtivo Load (1.4ms)[0m  [1m[34mSELECT "ativos".* FROM "ativos"[0m
+  ↳ app/views/admins_ativo/vinculos/_addativo_fields.html.erb:4
+  Rendered admins_ativo/vinculos/_addativo_fields.html.erb (40.0ms)
+  [1m[36mAddativo Load (0.9ms)[0m  [1m[34mSELECT "addativos".* FROM "addativos" WHERE "addativos"."vinculo_id" = ?[0m  [["vinculo_id", 10]]
+  ↳ app/views/admins_ativo/vinculos/_form.html.erb:48
+  Rendered admins_ativo/vinculos/_form.html.erb (507.7ms)
+  Rendered admins_ativo/vinculos/edit.html.erb within layouts/admins_ativo (514.5ms)
+Completed 200 OK in 2806ms (Views: 2639.3ms | ActiveRecord: 19.9ms)
+
+
+Started PATCH "/admins_ativo/vinculos/10" for 10.0.2.2 at 2022-02-10 01:38:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminsAtivo::VinculosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"la5vjTA8zlprK9jGZgjUD8Jywbuwf1+312ZHXJ9BOflLQHLpDaSu6ivBjRfxVtXnzeEiI1EYfpNtIY7n1xqLng==", "vinculo"=>{"user_id"=>"3", "area_id"=>"1", "subarea_id"=>"1", "detvinculo"=>"Teste", "addativos_attributes"=>{"1644457167453"=>{"id"=>"1", "_destroy"=>"false"}}}, "commit"=>"Salvar", "id"=>"10"}
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.9/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mVinculo Load (0.4ms)[0m  [1m[34mSELECT  "vinculos".* FROM "vinculos" WHERE "vinculos"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:48
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "users"."name", "users"."id" FROM "users"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:61
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "areas"."description", "areas"."id" FROM "areas"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:65
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "subareas"."description", "subareas"."id" FROM "subareas"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:69
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:30
+  [1m[36mAddativo Load (0.8ms)[0m  [1m[34mSELECT "addativos".* FROM "addativos" WHERE "addativos"."vinculo_id" = ? AND "addativos"."id" = ?[0m  [["vinculo_id", 10], ["id", 1]]
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:30
+Completed 404 Not Found in 20ms (ActiveRecord: 3.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Addativo with ID=1 for Vinculo with ID=10):
+  
+app/controllers/admins_ativo/vinculos_controller.rb:30:in `update'
+Started GET "/admins_ativo/vinculos/10/edit" for 10.0.2.2 at 2022-02-10 01:39:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminsAtivo::VinculosController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.9/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mVinculo Load (0.4ms)[0m  [1m[34mSELECT  "vinculos".* FROM "vinculos" WHERE "vinculos"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:48
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "users"."name", "users"."id" FROM "users"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:61
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "areas"."description", "areas"."id" FROM "areas"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:65
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "subareas"."description", "subareas"."id" FROM "subareas"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:69
+  Rendering admins_ativo/vinculos/edit.html.erb within layouts/admins_ativo
+  [1m[36mAtivo Load (1.0ms)[0m  [1m[34mSELECT "ativos".* FROM "ativos"[0m
+  ↳ app/views/admins_ativo/vinculos/_addativo_fields.html.erb:4
+  [1m[36mCondition Load (0.8ms)[0m  [1m[34mSELECT "conditions".* FROM "conditions"[0m
+  ↳ app/views/admins_ativo/vinculos/_addativo_fields.html.erb:10
+  [1m[36mSituation Load (0.9ms)[0m  [1m[34mSELECT "situations".* FROM "situations"[0m
+  ↳ app/views/admins_ativo/vinculos/_addativo_fields.html.erb:13
+  Rendered admins_ativo/vinculos/_addativo_fields.html.erb (39.2ms)
+  [1m[36mAddativo Load (0.5ms)[0m  [1m[34mSELECT "addativos".* FROM "addativos" WHERE "addativos"."vinculo_id" = ?[0m  [["vinculo_id", 10]]
+  ↳ app/views/admins_ativo/vinculos/_form.html.erb:48
+  Rendered admins_ativo/vinculos/_form.html.erb (58.9ms)
+  Rendered admins_ativo/vinculos/edit.html.erb within layouts/admins_ativo (67.3ms)
+Completed 200 OK in 232ms (Views: 202.7ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/admins_ativo/vinculos/10/edit" for 10.0.2.2 at 2022-02-10 01:39:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminsAtivo::VinculosController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rvm/gems/ruby-2.5.9/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mVinculo Load (0.8ms)[0m  [1m[34mSELECT  "vinculos".* FROM "vinculos" WHERE "vinculos"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:48
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "users"."name", "users"."id" FROM "users"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:61
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "areas"."description", "areas"."id" FROM "areas"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:65
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "subareas"."description", "subareas"."id" FROM "subareas"[0m
+  ↳ app/controllers/admins_ativo/vinculos_controller.rb:69
+  Rendering admins_ativo/vinculos/edit.html.erb within layouts/admins_ativo
+  [1m[36mAtivo Load (1.6ms)[0m  [1m[34mSELECT "ativos".* FROM "ativos"[0m
+  ↳ app/views/admins_ativo/vinculos/_addativo_fields.html.erb:4
+  [1m[36mCondition Load (0.9ms)[0m  [1m[34mSELECT "conditions".* FROM "conditions"[0m
+  ↳ app/views/admins_ativo/vinculos/_addativo_fields.html.erb:10
+  [1m[36mSituation Load (0.5ms)[0m  [1m[34mSELECT "situations".* FROM "situations"[0m
+  ↳ app/views/admins_ativo/vinculos/_addativo_fields.html.erb:13
+  Rendered admins_ativo/vinculos/_addativo_fields.html.erb (15.6ms)
+  [1m[36mAddativo Load (0.9ms)[0m  [1m[34mSELECT "addativos".* FROM "addativos" WHERE "addativos"."vinculo_id" = ?[0m  [["vinculo_id", 10]]
+  ↳ app/views/admins_ativo/vinculos/_form.html.erb:48
+  Rendered admins_ativo/vinculos/_form.html.erb (33.1ms)
+  Rendered admins_ativo/vinculos/edit.html.erb within layouts/admins_ativo (39.0ms)
+Completed 200 OK in 174ms (Views: 153.1ms | ActiveRecord: 7.1ms)
+
+
