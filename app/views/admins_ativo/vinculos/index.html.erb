@@ -33,6 +33,10 @@
             <i class="fa fa-edit"></i>
           <% end %>
         <td style="width: 10px">
+          <%= link_to edit_admins_ativo_vinculo_path(vinculo) do %>
+            <i class="fa fa-file-pdf" style="color:gray"></i>
+          <% end %>
+        <td style="width: 10px">
           <%= link_to admins_ativo_vinculo_path(vinculo), method: :delete, data: {confirm: "Certeza?"} do %>
             <i class="fa fa-trash" style="color:red"></i>
           <% end %>  

@@ -11,7 +11,7 @@ class AdminsAtivo::VinculosController < AdminsAtivoController
 
   def new
     @vinculo = Vinculo.new
-    #@addativos = @vinculo.addativos.build
+    #5.times {@addativos = @vinculo.addativos.build}
   end
 
   def create
