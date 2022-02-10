@@ -50,11 +50,11 @@ class AdminsAtivo::VinculosController < AdminsAtivoController
 
   def params_vinculo
     params_vinculo = params.require(:vinculo).permit(
-      :user_id, 
-      :area_id, 
-      :subarea_id, 
-      :detvinculo,    
-      addativos_attributes: [:id, :tombo, :description, :condition, :situation, :_destroy])
+    :user_id, 
+    :area_id, 
+    :subarea_id, 
+    :detvinculo,    
+    addativos_attributes: [:id, :ativo_id, :condition_id, :situation_id, :_destroy])
   end
 
   def set_user_option
