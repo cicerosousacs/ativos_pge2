@@ -6,7 +6,7 @@ class AdminsAtivo::VinculosController < AdminsAtivoController
   before_action :set_selects_options, only: [:new, :create, :edit, :update]
 
   def index
-    @vinculos = Vinculo.includes(:user, :area, :subarea)
+    @vinculos = Vinculo.includes(:user, :area, :subarea).all
   end
 
   def show

@@ -22,6 +22,18 @@
         <%= @vinculo.subarea.description %>
       </div>
   </div>
+    <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">created_at</label>
+      <div class="form-control bg-light border-6 smal">
+        <%= @vinculo.created_at.strftime("%d/%H/%Y") %>
+      </div>
+  </div>
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">updated_at</label>
+      <div class="form-control bg-light border-6 smal">
+        <%= @vinculo.updated_at.strftime("%d/%H/%Y") %>
+      </div>
+  </div>
 </form>
 
 <br>
@@ -35,13 +47,16 @@
       <th>situation</th>
     </tr>
   </thead>
+  
   <tbody>
+      <%= form_with(model: [ :admins_ativo, @vinculo ], local: true ) do |form| %>
       <tr>
-        <td><%= @vinculo.user.name %></td>
-        <td></td>
+        <td><%= @vinculo.addativos.attribute_names.to_sentence %></td>
+        <td><%= @vinculo.addativo_ids.to_sentence %></td>
         <td></td>
         <td></td>
       </tr>
+      <% end %>
   </tbody>
 </table>
 
