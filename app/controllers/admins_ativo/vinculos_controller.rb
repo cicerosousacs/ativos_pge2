@@ -6,7 +6,7 @@ class AdminsAtivo::VinculosController < AdminsAtivoController
   before_action :set_selects_options, only: [:new, :create, :edit, :update]
 
   def index
-    @vinculos = Vinculo.includes(:user, :area, :subarea)
+    @vinculos = Vinculo.includes(:user, :area, :subarea).all
   end
 
   def show
@@ -14,11 +14,11 @@ class AdminsAtivo::VinculosController < AdminsAtivoController
 
   def new
     @vinculo = Vinculo.new
-    #5.times {@addativos = @vinculo.addativos.build}
+    4.times {@addativos = @vinculo.addativos.build}
   end
 
   def create
-    @vinculo = Vinculo.new(params_vinculo)
+    @vinculo = Vinculo.create(params_vinculo)
     if @vinculo.save()
       redirect_to admins_ativo_vinculos_path, notice: "Vinculo criado. Parabéns!"
     else
@@ -57,7 +57,7 @@ class AdminsAtivo::VinculosController < AdminsAtivoController
     :area_id, 
     :subarea_id, 
     :detvinculo,    
-    addativos_attributes: [:id, :ativo_id, :condition_id, :situation_id, :_destroy])
+    addativos_attributes: [:id, :vinculo_id, :ativo_id, :condition_id, :situation_id, :_destroy])
   end
 
   def set_user_option
