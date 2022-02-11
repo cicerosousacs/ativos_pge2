@@ -1,24 +1,33 @@
 
 <h5>Vinculo</h5>
+<p id="notice"><%= notice %></p>
 
-<div>
-  <label class="form-group">user</label>
-    <div class="form-control bg-light border-6 small" disabled="disabled">
-</div>
+<form class="row g-3">
+  <div class="col-12">
+    <label for="inputAddress" class="form-label" >User</label>
+      <div class="form-control bg-light border-6 smal">
+        <%= @vinculo.user.name %>
+      </div>
+  </div>
+  <br>
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Area</label>
+      <div class="form-control bg-light border-6 smal">
+        <%= @vinculo.area.description %>
+      </div>
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Subarea</label>
+      <div class="form-control bg-light border-6 smal">
+        <%= @vinculo.subarea.description %>
+      </div>
+  </div>
+</form>
 
-<div>
-  <label class="form-group">area</label>
-    <div class="form-control bg-light border-6 small" disabled="disabled">
-</div>
+<br>
 
-<div>
-  <label class="form-group">setor</label>
-    <div class="form-control bg-light border-6 small" disabled="disabled">
-</div>
+<h5>Ativos Vinculados</h5><br>
 
-<hr>
-
-<h5>Ativos Vinculados</h5>
 <table class="table table-hover table-bordered">
   <thead>
     <tr>
@@ -37,3 +46,5 @@
       </tr>
   </tbody>
 </table>
+
+<%= link_to 'Edit', edit_admins_ativo_vinculo_path(@vinculo) %>
