@@ -14,7 +14,7 @@ class AdminsAtivo::VinculosController < AdminsAtivoController
 
   def new
     @vinculo = Vinculo.new
-    #5.times {@addativos = @vinculo.addativos.build}
+    4.times {@addativos = @vinculo.addativos.build}
   end
 
   def create
@@ -57,7 +57,7 @@ class AdminsAtivo::VinculosController < AdminsAtivoController
     :area_id, 
     :subarea_id, 
     :detvinculo,    
-    addativos_attributes: [:id, :ativo_id, :condition_id, :situation_id, :_destroy])
+    addativos_attributes: [:id, :vinculo_id, :ativo_id, :condition_id, :situation_id, :_destroy])
   end
 
   def set_user_option

@@ -49,14 +49,14 @@
   </thead>
   
   <tbody>
-      <%= form_with(model: [ :admins_ativo, @vinculo ], local: true ) do |form| %>
+
       <tr>
-        <td><%= @vinculo.addativos.attribute_names.to_sentence %></td>
+        <td><%= @vinculo.addativos.to_sentence %></td>
         <td><%= @vinculo.addativo_ids.to_sentence %></td>
         <td></td>
         <td></td>
       </tr>
-      <% end %>
+
   </tbody>
 </table>
 
