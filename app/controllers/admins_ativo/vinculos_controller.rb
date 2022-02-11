@@ -18,7 +18,7 @@ class AdminsAtivo::VinculosController < AdminsAtivoController
   end
 
   def create
-    @vinculo = Vinculo.new(params_vinculo)
+    @vinculo = Vinculo.create(params_vinculo)
     if @vinculo.save()
       redirect_to admins_ativo_vinculos_path, notice: "Vinculo criado. Parabéns!"
     else
