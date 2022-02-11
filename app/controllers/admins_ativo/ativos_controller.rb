@@ -1,5 +1,5 @@
 class AdminsAtivo::AtivosController < AdminsAtivoController
-  before_action :set_ativo, only: [:edit, :update, :destroy]
+  before_action :set_ativo, only: [:show, :edit, :update, :destroy]
   before_action :set_type_options, only: [:new, :create, :edit, :update]
 
   def index

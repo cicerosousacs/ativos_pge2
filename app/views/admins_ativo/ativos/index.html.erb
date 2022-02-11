@@ -3,7 +3,6 @@
     <h1>Ativos</h1>    
   </div>
 </div>
-
 <!-- Topbar Search -->
 <form class="d-none d-sm-inline-block form-inline mr-auto my-md-4">
   <div class="input-group">
@@ -14,9 +13,6 @@
   </div>
 </form>
 
-
-
-
 <table class="table table-hover table-bordered">
   <thead>
     <tr>
@@ -24,8 +20,8 @@
       <th>description</th>
       <th>serial</th>
       <th>tombo</th>
-      <th>date_acquisition</th>
-      <th>warranty</th>
+      <th>
+      <th>
       <th>
         <%= link_to new_admins_ativo_ativo_path do %>
           <i class="fa fa-plus" style="color:green"></i>
@@ -40,8 +36,10 @@
         <td><%= ativo.description %></td>
         <td><%= ativo.serial %></td>
         <td><%= ativo.tombo %></td>
-        <td><%= ativo.date_acquisition %></td>
-        <td><%= ativo.warranty %></td>
+        <td style="width: 10px">
+          <%= link_to admins_ativo_ativo_path(ativo) do %>
+            <i class="fa fa-eye"></i>
+          <% end %>
         <td style="width: 10px">
           <%= link_to edit_admins_ativo_ativo_path(ativo) do %>
             <i class="fa fa-edit"></i>
