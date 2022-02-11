@@ -1,5 +1,5 @@
 
-<h5>Vinculo</h5>
+<h5>Ativos Vinculados</h5>
 <p id="notice"><%= notice %></p>
 
 <form class="row g-3">
@@ -26,9 +26,7 @@
 
 <br>
 
-<h5>Ativos Vinculados</h5><br>
-
-<table class="table table-hover table-bordered">
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>tombo</th>
@@ -39,7 +37,7 @@
   </thead>
   <tbody>
       <tr>
-        <td></td>
+        <td><%= @vinculo.user.name %></td>
         <td></td>
         <td></td>
         <td></td>
@@ -47,4 +45,4 @@
   </tbody>
 </table>
 
-<%= link_to 'Edit', edit_admins_ativo_vinculo_path(@vinculo) %>
+<%= link_to 'Editar', edit_admins_ativo_vinculo_path(@vinculo), class:"btn btn-sm btn-primary" %>
