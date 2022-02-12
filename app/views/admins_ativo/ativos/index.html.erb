@@ -19,7 +19,7 @@
       <th>
       <th>
       <th>
-        <%= link_to new_admins_ativo_ativo_path do %>
+        <%= link_to new_admins_ativo_ativo_path, remote: true, data: { target: '#ativomodal', toggle: 'modal' } do %>
           <i class="fa fa-plus" style="color:green"></i>
         <% end %> 
       </th>
@@ -33,11 +33,11 @@
         <td><%= ativo.serial %></td>
         <td><%= ativo.tombo %></td>
         <td style="width: 10px">
-          <%= link_to admins_ativo_ativo_path(ativo) do %>
+          <%= link_to admins_ativo_ativo_path(ativo), remote: true, data: { target: '#ativomodal', toggle: 'modal' } do %>
             <i class="fa fa-eye"></i>
           <% end %>
         <td style="width: 10px">
-          <%= link_to edit_admins_ativo_ativo_path(ativo) do %>
+          <%= link_to edit_admins_ativo_ativo_path(ativo), remote: true, data: { target: '#ativomodal', toggle: 'modal' } do %>
             <i class="fa fa-edit"></i>
           <% end %>
         <td style="width: 10px">

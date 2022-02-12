@@ -10,8 +10,18 @@ class AdminsAtivo::AtivosController < AdminsAtivoController
     end
   end
 
+  def show
+    respond_to do |format|
+      format.js { render partial: 'admins_ativo/ativos/show' }
+    end
+  end
+
   def new
     @ativo = Ativo.new
+    respond_to do |format|
+      format.html
+      format.js { render partial: 'admins_ativo/ativos/ativo' }
+    end
   end
 
   def create
@@ -24,6 +34,10 @@ class AdminsAtivo::AtivosController < AdminsAtivoController
   end
 
   def edit
+    respond_to do |format|
+      format.html
+      format.js { render partial: 'admins_ativo/ativos/ativo' }
+    end
   end
 
   def update
