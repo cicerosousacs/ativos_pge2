@@ -12,7 +12,7 @@ class AdminsAtivo::AtivosController < AdminsAtivoController
 
   def show
     respond_to do |format|
-      format.js { render partial: 'admins_ativo/ativos/show' }
+      format.js { render partial: 'admins_ativo/ativos/exibir' }
     end
   end
 

@@ -1,0 +1,66 @@
+<form class="row g-3">
+  <div class="col-md-3">
+    <label for="inputEmail4" class="form-label">type</label>
+      <div class="form-control bg-light border-6 smal">
+        <%= @ativo.type.description %>
+      </div>
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">description</label>
+      <div class="form-control bg-light border-6 smal">
+        <%= @ativo.description %>
+      </div>
+  </div>
+  <div class="col-md-6">
+    <label for="inputCity" class="form-label">specification</label>
+      <textarea rows="6" class="form-control bg-light border-6 smal" disabled="disabled">
+        <%= @ativo.specification %>
+      </textarea>
+  </div>
+  <div class="col-2">
+    <label for="inputAddress" class="form-label">serial</label>
+      <div class="form-control bg-light border-6 smal">
+        <%= @ativo.serial %>
+      </div>
+  </div>
+  <div class="col-2">
+    <label for="inputAddress2" class="form-label">tombo</label>
+      <div class="form-control bg-light border-6 smal">
+        <%= @ativo.tombo %>
+      </div>
+  </div>
+  <div class="col-md-2">
+    <label for="inputZip" class="form-label">invoice</label>
+      <div class="form-control bg-light border-6 smal">
+        <%= @ativo.invoice %>
+      </div>
+  </div>
+  <div class="col-md-2">
+    <label for="inputZip" class="form-label">date_acquisition</label>
+      <div class="form-control bg-light border-6 smal">
+        <%= @ativo.date_acquisition.strftime("%d/%m/%Y") %>
+      </div>
+  </div>
+  <div class="col-md-2">
+    <label for="inputZip" class="form-label">warranty</label>
+      <div class="form-control bg-light border-6 smal">
+        <%= @ativo.warranty %>
+      </div>
+  </div>
+  <div class="col-md-2">
+    <label for="inputZip" class="form-label">ata</label>
+      <div class="form-control bg-light border-6 smal">
+        <%= @ativo.ata %>
+      </div>
+  </div>
+  <div class="col-md-2">
+    <label for="inputZip" class="form-label">bidding</label>
+      <div class="form-control bg-light border-6 smal">
+        <%= @ativo.bidding %>
+      </div>
+  </div>
+</form>
+
+<hr/>
+
+<%= link_to 'Editar', edit_admins_ativo_ativo_path(@ativo), remote: true, data: { target: '#ativomodal', toggle: 'modal' }, class:"btn btn-sm btn-primary" %>
