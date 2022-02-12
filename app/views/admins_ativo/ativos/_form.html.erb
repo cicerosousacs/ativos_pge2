@@ -12,47 +12,49 @@
 
 
 <%= form_with(model: [ :admins_ativo, @ativo ], local: true ) do |form| %>
-
-  <div class="form-group">
+<div class="row g-3">
+  <div class="form-group col-md-2">
     <%= form.label :type %> <br>
     <%= form.select("type_id", @type_options, {include_blank: 'Selecione...'}, class:"form-control border-6 small") %>
   </div>
-  <div class="form-group">
+  <div class="form-group col-md-10">
     <%= form.label :description %> <br>
     <%= form.text_field :description, class:"form-control border-6 small" %>
   </div>
-    <div class="form-group">
+  <div class="form-group col-md-2">
     <%= form.label :serial %> <br>
     <%= form.text_field :serial, class:"form-control border-6 small" %>
   </div>
-    <div class="form-group">
+  <div class="form-group col-md-2">
     <%= form.label :tombo %> <br>
     <%= form.text_field :tombo, class:"form-control border-6 small" %>
   </div>
-    <div class="form-group">
+  <div class="form-group col-md-8">
     <%= form.label :specification %> <br>
-    <%= form.text_field :specification, class:"form-control border-6 small" %>
+    <%= form.text_area :specification, class:"form-control border-6 small" %>
   </div>
-    <div class="form-group">
+  <div class="form-group col-md-2">
     <%= form.label :invoice %> <br>
     <%= form.text_field :invoice, class:"form-control border-6 small" %>
   </div>
-    <div class="form-group">
+  <div class="form-group col-md-2">
     <%= form.label :date_acquisition %> <br>
     <%= form.date_select :date_acquisition, class:"form-control border-6 small" %>
   </div>
-    <div class="form-group">
+  <div class="form-group col-md-2">
     <%= form.label :warranty %> <br>
     <%= form.text_field :warranty, class:"form-control border-6 small" %>
   </div>
-      <div class="form-group">
+      <div class="form-group col-md-2">
     <%= form.label :ata %> <br>
     <%= form.text_field :ata, class:"form-control border-6 small" %>
   </div>
-    <div class="form-group">
+  <div class="form-group col-md-2">
     <%= form.label :bidding %> <br>
     <%= form.text_field :bidding, class:"form-control border-6 small" %>
   </div>
+</div>
+<hr/>
 
   <%= form.submit "Salvar", class:"btn btn-sm btn-primary" %>
 

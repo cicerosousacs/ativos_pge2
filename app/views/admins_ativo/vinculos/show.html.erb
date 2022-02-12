@@ -4,32 +4,32 @@
 
 <form class="row g-3">
   <div class="col-12">
-    <label for="inputAddress" class="form-label" >User</label>
+    <label for="inputAddress" class="form-group" >User</label>
       <div class="form-control bg-light border-6 smal">
         <%= @vinculo.user.name %>
       </div>
   </div>
   <br>
   <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">Area</label>
+    <label for="inputEmail4" class="form-group">Area</label>
       <div class="form-control bg-light border-6 smal">
         <%= @vinculo.area.description %>
       </div>
   </div>
   <div class="col-md-6">
-    <label for="inputPassword4" class="form-label">Subarea</label>
+    <label for="inputPassword4" class="form-group">Subarea</label>
       <div class="form-control bg-light border-6 smal">
         <%= @vinculo.subarea.description %>
       </div>
   </div>
     <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">created_at</label>
+    <label for="inputEmail4" class="form-group">created_at</label>
       <div class="form-control bg-light border-6 smal">
         <%= @vinculo.created_at.strftime("%d/%m/%Y as %H:%M") %>
       </div>
   </div>
   <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">updated_at</label>
+    <label for="inputEmail4" class="form-group">updated_at</label>
       <div class="form-control bg-light border-6 smal">
         <%= @vinculo.updated_at.strftime("%d/%m/%Y as %H:%M") %>
       </div>
