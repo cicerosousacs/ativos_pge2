@@ -1,19 +1,26 @@
 <div class="control-group nested-fields">
-  <div class="controls">
-    <%= f.label :tombo %>
-    <%= f.select("id", @ativos.collect { |a| [a.tombo, a.id] }, { include_blank: 'Selecione...' })%>
+  <div class="row g-3"><br>
+    <div class="control col-md-2">
+      <%= f.select("id", @ativos.collect { |a| [a.tombo, a.id] }, { include_blank: 'Tombo' }, class:"form-control")%>
+    </div>
 
-    <%= f.label :description %>
-    <%= f.select("id", @ativos.collect { |a| [a.description, a.id] }, { include_blank: 'Selecione...' })%>
+    <div class="control col-md-5">
+      <%= f.select("id", @ativos.collect { |a| [a.description, a.id] }, { include_blank: 'Descrição' }, class:"form-control")%>
+    </div>
 
-    <%= f.label :condition %>
-    <%= f.select("id", @conditions.collect { |c| [c.description, c.id] }, { include_blank: 'Selecione...'})%>
+    <div class="control col-md-2">
+      <%= f.select("id", @conditions.collect { |c| [c.description, c.id] }, { include_blank: 'Selecione...'}, class:"form-control")%>
+    </div>
 
-    <%= f.label :situation %>
-    <%= f.select("id", @situations.collect { |s| [s.description, s.id] }, { include_blank: 'Selecione...'})%>
+    <div class="control col-md-2">
+      <%= f.select("id", @situations.collect { |s| [s.description, s.id] }, { include_blank: 'Selecione...'}, class:"form-control")%>
+    </div>
 
-    <%= link_to_remove_association(f, data: {confirm: "Certeza?"}, class: "btn-sm btn-danger") do %>
+    <div class="control">
+      <%= link_to_remove_association(f, data: {confirm: "Certeza?"}, class: "btn-sm btn-danger") do %>
       <i class="fa fa-times" style="color:white"></i>
     <% end %>
+    </div><br>
   </div>
 </div>
+<br>

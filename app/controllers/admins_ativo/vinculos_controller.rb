@@ -3,10 +3,10 @@ class AdminsAtivo::VinculosController < AdminsAtivoController
   before_action :set_user_option, only: [:new, :create, :edit, :update]
   before_action :set_area_option, only: [:new, :create, :edit, :update]
   before_action :set_subarea_option, only: [:new, :create, :edit, :update]
-  before_action :set_selects_options, only: [:new, :create, :edit, :update]
+  before_action :set_selects_options, only: [:show, :new, :create, :edit, :update]
 
   def index
-    @vinculos = Vinculo.includes(:user, :area, :subarea).all
+    @vinculos = Vinculo.includes(:user, :area, :subarea)
   end
 
   def show
@@ -57,7 +57,7 @@ class AdminsAtivo::VinculosController < AdminsAtivoController
     :area_id, 
     :subarea_id, 
     :detvinculo,    
-    addativos_attributes: [:id, :vinculo_id, :ativo_id, :condition_id, :situation_id, :_destroy])
+    addativos_attributes: [:id, :ativo, :condition, :situation, :_destroy])
   end
 
   def set_user_option
@@ -76,6 +76,7 @@ class AdminsAtivo::VinculosController < AdminsAtivoController
     @ativos = Ativo.all
     @conditions = Condition.all
     @situations = Situation.all
+    @addativos = Addativo.all
   end
 
 end

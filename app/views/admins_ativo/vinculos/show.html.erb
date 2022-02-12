@@ -25,20 +25,20 @@
     <div class="col-md-6">
     <label for="inputEmail4" class="form-label">created_at</label>
       <div class="form-control bg-light border-6 smal">
-        <%= @vinculo.created_at.strftime("%d/%m/%Y") %>
+        <%= @vinculo.created_at.strftime("%d/%m/%Y as %H:%M") %>
       </div>
   </div>
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">updated_at</label>
       <div class="form-control bg-light border-6 smal">
-        <%= @vinculo.updated_at.strftime("%d/%m/%Y") %>
+        <%= @vinculo.updated_at.strftime("%d/%m/%Y as %H:%M") %>
       </div>
   </div>
 </form>
 
 <br>
 
-<table class="table table-bordered">
+<table class="table table-bordered ">
   <thead>
     <tr>
       <th>tombo</th>
@@ -49,14 +49,14 @@
   </thead>
   
   <tbody>
-
+    <% @addativos.each do |addativo| %>
       <tr>
-        <td><%= @vinculo.addativos.attribute_names %></td>
-        <td><%= @vinculo.addativo_ids.to_sentence %></td>
-        <td></td>
-        <td></td>
+        <td><% addativo.tombo %></td>
+        <td><% addativo.description %></td>
+        <td><% addativo.condition %></td>
+        <td><% addativo.situation %></td>
       </tr>
-
+    <% end %>
   </tbody>
 </table>
 
