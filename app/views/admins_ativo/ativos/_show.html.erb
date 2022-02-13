@@ -63,4 +63,8 @@
 
 <hr/>
 
-<%= link_to 'Editar', edit_admins_ativo_ativo_path(@ativo), remote: true, data: { target: '#ativomodal', toggle: 'modal' }, class:"btn btn-sm btn-primary" %>
+<div class="text-right">
+  <%= link_to 'Editar', edit_admins_ativo_ativo_path(@ativo), 
+  remote: true, data: { target: '#ativomodal', toggle: 'modal' }, 
+  class:"btn btn-sm btn-primary" %>
+</div>
