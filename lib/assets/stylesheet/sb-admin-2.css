@@ -1485,14 +1485,14 @@ pre code {
 .table {
   width: 100%;
   margin-bottom: 1rem;
-  color: #858796;
+  color: #29292b;
 }
 
 .table th,
 .table td {
   padding: 0.75rem;
   vertical-align: top;
-  border-top: 1px solid #e3e6f0;
+  border-top: 2px solid #e3e6f0;
 }
 
 .table thead th {
@@ -1535,7 +1535,7 @@ pre code {
 }
 
 .table-hover tbody tr:hover {
-  color: #858796;
+  color: #232324;
   background-color: rgba(0, 0, 0, 0.075);
 }
 
@@ -1905,7 +1905,7 @@ input[type="month"].form-control {
 }
 
 select.form-control:focus::-ms-value {
-  color: #6e707e;
+  color: #d3d4dd;
   background-color: #fff;
 }
 
@@ -4754,6 +4754,7 @@ input[type="button"].btn-block {
   padding-left: 0;
   list-style: none;
   border-radius: 0.35rem;
+  justify-content: right
 }
 
 .page-link {

@@ -5,12 +5,15 @@
 </div>
 <br>
 
-<table class="table table-hover table-bordered">
+<table class="table table-hover">
   <thead>
     <tr>
       <th>user</th>
       <th>area</th>
       <th>subarea</th>
+      <th>
+      <th>
+      <th>
       <th>
         <%= link_to new_admins_ativo_vinculo_path do %>
           <i class="fa fa-plus" style="color:green"></i>
@@ -26,19 +29,19 @@
         <td><%= vinculo.subarea.description %></td>
         <td style="width: 10px">
           <%= link_to admins_ativo_vinculo_path(vinculo) do %>
-            <i class="fa fa-eye" style="color:black"></i>
+            <i class="fa fa-eye"></i>
           <% end %>
         <td style="width: 10px">
           <%= link_to edit_admins_ativo_vinculo_path(vinculo) do %>
-            <i class="fa fa-edit" style="color:blue"></i>
+            <i class="fa fa-edit"></i>
           <% end %>
         <td style="width: 10px">
           <%= link_to edit_admins_ativo_vinculo_path(vinculo) do %>
-            <i class="fa fa-file-pdf" style="color:gray"></i>
+            <i class="fa fa-file-pdf"></i>
           <% end %>
         <td style="width: 10px">
           <%= link_to admins_ativo_vinculo_path(vinculo), method: :delete, data: {confirm: "Certeza?"} do %>
-            <i class="fa fa-trash" style="color:red"></i>
+            <i class="fa fa-trash"></i>
           <% end %>  
         </td>
       </tr>
