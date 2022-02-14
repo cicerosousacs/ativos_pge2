@@ -59,13 +59,7 @@
                 </i>
               <% end %>
             </li>
-            <!-- Nav Item - Tables -->
-            <li class="nav-item active">
-              <%= link_to admins_ativo_users_path do %>
-                <i class="nav-link fas fa-fw fa-users">
-                  <span style="font-family:Tahoma;">Usuários</span></i>
-                <% end %>
-            </li>
+            
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
             <!-- Nav Item - Pages Collapse Menu -->
@@ -107,6 +101,9 @@
                       <% end %>
                       <%= link_to admins_ativo_situations_path do %>
                         <i class="collapse-item">Situação</i>
+                      <% end %>
+                      <%= link_to admins_ativo_users_path do %>
+                        <i class="collapse-item">Usuários</i>
                       <% end %>
                     </div>
                 </div>
