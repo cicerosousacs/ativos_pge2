@@ -1,5 +1,5 @@
 class Vinculo < ApplicationRecord
-  belongs_to :user, optional: false#, inverse_of: :vinculos
+  belongs_to :user#, inverse_of: :vinculos
   belongs_to :area#, inverse_of: :vinculos
   belongs_to :subarea#, inverse_of: :vinculos
 

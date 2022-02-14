@@ -4,9 +4,11 @@
   <form class="d-sm-inline-block">
     <div class="input-group">
       <%= form_tag(admins_ativo_users_path, :method => :get) do %>
-        <%= text_field_tag 'search', nil, class: "form-control border-8", placeholder: 'Tombo, Serial ou Descrição' %>
+        <%= text_field_tag 'search', nil, class: "form-control me-2", placeholder: 'Tombo, Serial ou Descrição' %>
       <% end %>
-        <%= submit_tag "Pesquisar", class: "btn btn-sm btn-primary"%>
+      <%= button_tag type: 'submit', class: "btn btn-primary" do %>
+        <i class="fa fa-search" aria-hidden="true"></i>
+      <% end %>
     </div>
   </form>
 </div>

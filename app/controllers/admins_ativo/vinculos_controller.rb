@@ -10,6 +10,7 @@ class AdminsAtivo::VinculosController < AdminsAtivoController
   end
 
   def show
+    @vinculos = Vinculo.all
   end
 
   def new
@@ -57,7 +58,7 @@ class AdminsAtivo::VinculosController < AdminsAtivoController
     :area_id, 
     :subarea_id, 
     :detvinculo,    
-    addativos_attributes: [:id, :ativo, :condition, :situation, :_destroy])
+    addativos_attributes: [:id, :tombo, :description, :condition, :situation, :_destroy])
   end
 
   def set_user_option
@@ -76,7 +77,7 @@ class AdminsAtivo::VinculosController < AdminsAtivoController
     @ativos = Ativo.all
     @conditions = Condition.all
     @situations = Situation.all
-    @addativos = Addativo.all
+
   end
 
 end

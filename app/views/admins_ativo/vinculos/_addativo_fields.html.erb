@@ -1,19 +1,19 @@
 <div class="control-group nested-fields">
   <div class="row g-3"><br>
     <div class="control col-md-2">
-      <%= f.select("id", @ativos.collect { |a| [a.tombo, a.id] }, { include_blank: 'Tombo' }, class:"form-control")%>
+      <%= f.text_field :tombo, class:"form-control"%>
     </div>
 
     <div class="control col-md-5">
-      <%= f.select("id", @ativos.collect { |a| [a.description, a.id] }, { include_blank: 'Descrição' }, class:"form-control")%>
+      <%= f.text_field :description, class:"form-control"%>
     </div>
 
     <div class="control col-md-2">
-      <%= f.select("id", @conditions.collect { |c| [c.description, c.id] }, { include_blank: 'Selecione...'}, class:"form-control")%>
+      <%= f.text_field :condition, class:"form-control"%>
     </div>
 
     <div class="control col-md-2">
-      <%= f.select("id", @situations.collect { |s| [s.description, s.id] }, { include_blank: 'Selecione...'}, class:"form-control")%>
+      <%= f.text_field :situation, class:"form-control"%>
     </div>
 
     <div class="control">
