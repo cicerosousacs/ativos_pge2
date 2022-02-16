@@ -1,6 +1,6 @@
 namespace :dev do
 
-DEFAULT_PASSWORD = '@tivos2022'
+DEFAULT_PASSWORD = '@tivos_2022'
 DEFAULT_FILE_PATH = File.join(Rails.root, 'lib', 'tmp')
 
   desc "Configura o ambiente de desenvolvimento"
