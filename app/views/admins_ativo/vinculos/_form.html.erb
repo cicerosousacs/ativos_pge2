@@ -46,7 +46,7 @@
 
   <hr/>
     <div id='addativos'>
-      <%= form.fields_for :addativos do |addativo| %>
+      <%= form.fields_for :addativos, include_id: false do |addativo| %>
         <%= render partial: "addativo_fields", locals: { f: addativo } %>
       <% end %>
     </div>

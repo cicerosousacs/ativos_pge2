@@ -77,7 +77,6 @@ class AdminsAtivo::VinculosController < AdminsAtivoController
     @ativos = Ativo.all
     @conditions = Condition.all
     @situations = Situation.all
-
   end
 
 end
